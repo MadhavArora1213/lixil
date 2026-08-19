@@ -1603,20 +1603,20 @@
 
     <!-- MODERNIZED GUIDED "+ CREATE REPORT" MODAL WIZARD -->
     <div id="create-report-modal-overlay" onclick="closeCreateReportWizard()" class="fixed inset-0 bg-slate-950/80 z-50 hidden backdrop-blur-md transition-opacity"></div>
-    <div id="create-report-modal" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-2xl bg-factory-card border border-factory-border rounded-2xl z-50 hidden shadow-2xl p-6 space-y-5 transition-all">
+    <div id="create-report-modal" class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[calc(100%-2rem)] max-w-2xl bg-factory-card border border-factory-border rounded-2xl z-50 hidden shadow-2xl p-4 sm:p-6 space-y-4 sm:space-y-5 transition-all max-h-[90vh] overflow-y-auto">
         
         <!-- Modal Header -->
-        <div class="flex justify-between items-center border-b border-factory-border pb-3.5">
-            <div class="flex items-center space-x-3">
-                <div class="p-2 bg-blue-600/10 text-blue-400 rounded-xl border border-blue-500/20">
+        <div class="flex justify-between items-start sm:items-center border-b border-factory-border pb-3.5 gap-2">
+            <div class="flex items-center space-x-2 sm:space-x-3">
+                <div class="p-2 bg-blue-600/10 text-blue-400 rounded-xl border border-blue-500/20 shrink-0">
                     <i data-lucide="file-plus-2" class="w-5 h-5"></i>
                 </div>
                 <div>
-                    <h3 class="text-sm font-bold text-slate-100 uppercase tracking-wide">Custom Management Report Builder</h3>
-                    <p class="text-[11px] text-slate-400 font-mono">Configure criteria to generate operational reports</p>
+                    <h3 class="text-xs sm:text-sm font-bold text-slate-100 uppercase tracking-wide">Custom Management Report Builder</h3>
+                    <p class="text-[10px] sm:text-[11px] text-slate-400 font-mono">Configure criteria to generate operational reports</p>
                 </div>
             </div>
-            <button onclick="closeCreateReportWizard()" class="p-1 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/80 transition cursor-pointer">
+            <button onclick="closeCreateReportWizard()" class="p-1 rounded-lg text-slate-400 hover:text-slate-200 hover:bg-slate-800/80 transition cursor-pointer shrink-0">
                 <i data-lucide="x" class="w-5 h-5"></i>
             </button>
         </div>
@@ -1625,7 +1625,7 @@
         <div class="space-y-4 text-xs font-mono">
             
             <!-- STEP 1: REPORT TYPE -->
-            <div class="wiz-step-card p-3.5 bg-slate-900/80 rounded-xl border border-slate-800 space-y-1.5">
+            <div class="wiz-step-card p-3 sm:p-3.5 bg-slate-900/80 rounded-xl border border-slate-800 space-y-1.5">
                 <div class="flex items-center space-x-2 text-slate-300 font-bold mb-1">
                     <span class="w-5 h-5 rounded-full bg-blue-600 text-white text-[10px] flex items-center justify-center font-mono">1</span>
                     <span>Select Report Category</span>
@@ -1640,10 +1640,10 @@
             </div>
 
             <!-- STEP 2 & 3: DATE RANGE & SCOPE -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                <div class="wiz-step-card p-3.5 bg-slate-900/80 rounded-xl border border-slate-800 space-y-1.5">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div class="wiz-step-card p-3 sm:p-3.5 bg-slate-900/80 rounded-xl border border-slate-800 space-y-1.5">
                     <div class="flex items-center space-x-2 text-slate-300 font-bold mb-1">
-                        <span class="w-5 h-5 rounded-full bg-blue-600 text-white text-[10px] flex items-center justify-center font-mono">2</span>
+                        <span class="w-5 h-5 rounded-full bg-blue-600 text-white text-[10px] flex items-center justify-center font-mono shrink-0">2</span>
                         <span>Reporting Date Range</span>
                     </div>
                     <select id="wiz-rep-date" class="w-full bg-slate-950 border border-slate-800 text-slate-200 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-blue-500/50 cursor-pointer">
@@ -1654,9 +1654,9 @@
                     </select>
                 </div>
 
-                <div class="wiz-step-card p-3.5 bg-slate-900/80 rounded-xl border border-slate-800 space-y-1.5">
+                <div class="wiz-step-card p-3 sm:p-3.5 bg-slate-900/80 rounded-xl border border-slate-800 space-y-1.5">
                     <div class="flex items-center space-x-2 text-slate-300 font-bold mb-1">
-                        <span class="w-5 h-5 rounded-full bg-blue-600 text-white text-[10px] flex items-center justify-center font-mono">3</span>
+                        <span class="w-5 h-5 rounded-full bg-blue-600 text-white text-[10px] flex items-center justify-center font-mono shrink-0">3</span>
                         <span>Factory Scope</span>
                     </div>
                     <select id="wiz-rep-scope" class="w-full bg-slate-950 border border-slate-800 text-slate-200 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-blue-500/50 cursor-pointer">
@@ -1668,9 +1668,9 @@
             </div>
 
             <!-- STEP 4: SHIFT SELECTION -->
-            <div class="wiz-step-card p-3.5 bg-slate-900/80 rounded-xl border border-slate-800 space-y-1.5">
+            <div class="wiz-step-card p-3 sm:p-3.5 bg-slate-900/80 rounded-xl border border-slate-800 space-y-1.5">
                 <div class="flex items-center space-x-2 text-slate-300 font-bold mb-1">
-                    <span class="w-5 h-5 rounded-full bg-blue-600 text-white text-[10px] flex items-center justify-center font-mono">4</span>
+                    <span class="w-5 h-5 rounded-full bg-blue-600 text-white text-[10px] flex items-center justify-center font-mono shrink-0">4</span>
                     <span>Shift Selection</span>
                 </div>
                 <select id="wiz-rep-shift" class="w-full bg-slate-950 border border-slate-800 text-slate-200 rounded-lg p-2.5 outline-none focus:ring-2 focus:ring-blue-500/50 cursor-pointer">
@@ -1682,12 +1682,12 @@
             </div>
 
             <!-- STEP 5: REPORT CONTENTS -->
-            <div class="wiz-step-card p-3.5 bg-slate-900/80 rounded-xl border border-slate-800 space-y-2">
+            <div class="wiz-step-card p-3 sm:p-3.5 bg-slate-900/80 rounded-xl border border-slate-800 space-y-2">
                 <div class="flex items-center space-x-2 text-slate-300 font-bold mb-1">
-                    <span class="w-5 h-5 rounded-full bg-blue-600 text-white text-[10px] flex items-center justify-center font-mono">5</span>
+                    <span class="w-5 h-5 rounded-full bg-blue-600 text-white text-[10px] flex items-center justify-center font-mono shrink-0">5</span>
                     <span>Include Report Contents</span>
                 </div>
-                <div class="grid grid-cols-2 gap-2 text-slate-300 font-sans text-xs">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-slate-300 font-sans text-xs">
                     <label class="p-2 bg-slate-950/60 rounded-lg border border-slate-800 flex items-center space-x-2 cursor-pointer hover:border-blue-500/40 transition">
                         <input type="checkbox" checked class="rounded border-slate-700 text-blue-600 focus:ring-blue-500">
                         <span>Performance Summary</span>
@@ -1709,9 +1709,9 @@
         </div>
 
         <!-- Wizard Action Buttons -->
-        <div class="pt-3 border-t border-factory-border flex justify-end space-x-3 font-sans">
-            <button onclick="closeCreateReportWizard()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs rounded-lg transition cursor-pointer active:scale-95">Cancel</button>
-            <button onclick="submitReportWizard()" class="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-lg transition cursor-pointer flex items-center space-x-1.5 shadow-md active:scale-95">
+        <div class="pt-3 border-t border-factory-border flex flex-col-reverse sm:flex-row justify-end gap-2 sm:space-x-3 font-sans">
+            <button onclick="closeCreateReportWizard()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs rounded-lg transition cursor-pointer active:scale-95 w-full sm:w-auto text-center">Cancel</button>
+            <button onclick="submitReportWizard()" class="px-5 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-lg transition cursor-pointer flex items-center justify-center space-x-1.5 shadow-md active:scale-95 w-full sm:w-auto">
                 <i data-lucide="check-circle-2" class="w-4 h-4"></i>
                 <span>Generate Report</span>
             </button>

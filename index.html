@@ -453,7 +453,7 @@
     <div class="flex flex-1 overflow-hidden">
 
         <!-- PERSISTENT LEFT SIDEBAR NAV -->
-        <aside class="w-52 md:w-56 bg-factory-header border-r border-factory-border flex flex-col justify-between shrink-0 select-none z-20">
+        <aside class="w-56 md:w-60 bg-factory-header border-r border-factory-border flex flex-col justify-between shrink-0 select-none z-20">
             <nav class="p-3 space-y-1">
                 <div class="px-3 py-2 text-[10px] font-bold text-slate-500 uppercase tracking-wider font-mono">Operations Navigation</div>
                 
@@ -467,11 +467,11 @@
                 </button>
                 <button onclick="switchView('production')" id="nav-production" class="nav-btn w-full flex items-center space-x-3 px-3 py-2.5 rounded text-xs font-medium transition text-slate-400 hover:bg-slate-800/60 hover:text-slate-200 cursor-pointer">
                     <i data-lucide="trending-up" class="w-4 h-4 text-amber-400"></i>
-                    <span>Production Performance</span>
+                    <span class="whitespace-nowrap">Production Performance</span>
                 </button>
                 <button onclick="switchView('analytics')" id="nav-analytics" class="nav-btn w-full flex items-center space-x-3 px-3 py-2.5 rounded text-xs font-medium transition text-slate-400 hover:bg-slate-800/60 hover:text-slate-200 cursor-pointer">
                     <i data-lucide="clock" class="w-4 h-4 text-purple-400"></i>
-                    <span>Cycle & Flow Analytics</span>
+                    <span class="whitespace-nowrap">Cycle & Flow Analytics</span>
                 </button>
 
                 <div class="pt-3 px-3 py-2 text-[10px] font-bold text-slate-500 uppercase tracking-wider font-mono">Business & Reporting</div>
@@ -489,7 +489,7 @@
                 </button>
                 <button onclick="switchView('config')" id="nav-config" class="nav-btn w-full flex items-center space-x-3 px-3 py-2.5 rounded text-xs font-medium transition text-slate-400 hover:bg-slate-800/60 hover:text-slate-200 cursor-pointer">
                     <i data-lucide="settings" class="w-4 h-4 text-slate-400"></i>
-                    <span>System Config & Health</span>
+                    <span class="whitespace-nowrap">System Config & Health</span>
                 </button>
             </nav>
         </aside>
@@ -789,26 +789,26 @@
             <!-- VIEW 03: PRODUCTION PERFORMANCE -->
             <section id="view-production" class="view-panel space-y-5 hidden">
                 <!-- KPI Performance Ribbon -->
-                <div class="grid grid-cols-2 lg:grid-cols-5 gap-3">
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
                     <div class="bg-factory-card p-3.5 rounded border border-factory-border shadow-md">
-                        <div class="text-[11px] text-slate-400">EXPECTED CYCLES (ELAPSED)</div>
-                        <div class="text-2xl font-bold font-mono text-slate-100" id="prod-kpi-expected">410</div>
+                        <div class="text-[10px] sm:text-[11px] text-slate-400 whitespace-nowrap">EXPECTED CYCLES</div>
+                        <div class="text-xl sm:text-2xl font-bold font-mono text-slate-100" id="prod-kpi-expected">410</div>
                     </div>
                     <div class="bg-factory-card p-3.5 rounded border border-factory-border shadow-md">
-                        <div class="text-[11px] text-slate-400">ACTUAL CYCLES COMPLETED</div>
-                        <div class="text-2xl font-bold font-mono text-blue-400" id="prod-kpi-actual">428</div>
+                        <div class="text-[10px] sm:text-[11px] text-slate-400 whitespace-nowrap">ACTUAL CYCLES</div>
+                        <div class="text-xl sm:text-2xl font-bold font-mono text-blue-400" id="prod-kpi-actual">428</div>
                     </div>
                     <div class="bg-factory-card p-3.5 rounded border border-factory-border shadow-md">
-                        <div class="text-[11px] text-slate-400">PROGRESS VS EXPECTED</div>
-                        <div class="text-2xl font-bold font-mono text-emerald-400" id="prod-kpi-progress">104.3%</div>
+                        <div class="text-[10px] sm:text-[11px] text-slate-400 whitespace-nowrap">VS EXPECTED</div>
+                        <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-400" id="prod-kpi-progress">104.3%</div>
                     </div>
                     <div class="bg-factory-card p-3.5 rounded border border-factory-border shadow-md">
-                        <div class="text-[11px] text-slate-400">LANES ON TARGET</div>
-                        <div class="text-2xl font-bold font-mono text-emerald-400" id="prod-kpi-above-target">68 / 80</div>
+                        <div class="text-[10px] sm:text-[11px] text-slate-400 whitespace-nowrap">ON TARGET</div>
+                        <div class="text-xl sm:text-2xl font-bold font-mono text-emerald-400" id="prod-kpi-above-target">68 / 80</div>
                     </div>
                     <div class="bg-factory-card p-3.5 rounded border border-factory-border shadow-md">
-                        <div class="text-[11px] text-slate-400">LANES BELOW MINIMUM</div>
-                        <div class="text-2xl font-bold font-mono text-rose-400" id="prod-kpi-below-min">4 / 80</div>
+                        <div class="text-[10px] sm:text-[11px] text-slate-400 whitespace-nowrap">BELOW MIN</div>
+                        <div class="text-xl sm:text-2xl font-bold font-mono text-rose-400" id="prod-kpi-below-min">4 / 80</div>
                     </div>
                 </div>
 
